@@ -11,8 +11,7 @@ const profileRoutes = require("./routes/profileRoutes");
 app.use(express.json());
 app.use(cors());
 
-// const mongoUrl = process.env.MONGODB_URL;
-const mongoUrl = 'mongodb+srv://numitrex:numitrex@numitrex.hiyrjzb.mongodb.net/?retryWrites=true&w=majority';
+const mongoUrl = process.env.MONGODB_URL;
 mongoose.connect(mongoUrl, err => {
   if (err) {
     console.log(err, "Error connecting to Mongo");
